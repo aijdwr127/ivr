@@ -37,21 +37,21 @@
 Аппаратные требования:
 <br />
     &nbsp;&nbsp;&nbsp;&nbsp;Для ПК и ноутбуков:
-    <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;Windows <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows 10 или более поздней версии;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows Server 2016 или более поздней версии;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Процессор Intel Pentium 4 или более поздней версии с поддержкой SSE3.<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;macOS<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;macOS High Sierra 10.13 или более поздней версии.<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;Linux<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu 18.04 (64-разрядная версия) или более поздней версии, Debian 10 или более поздней версии, openSUSE 15.2 или более поздней версии, Fedora Linux 32 или более поздней версии.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Процессор Intel Pentium 4 или более поздней версии с поддержкой SSE3.<br />
+        <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Windows <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows 10 или более поздней версии;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows Server 2016 или более поздней версии;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Процессор Intel Pentium 4 или более поздней версии с поддержкой SSE3.<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;macOS<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;macOS High Sierra 10.13 или более поздней версии.<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Linux<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu 18.04 (64-разрядная версия) или более поздней версии, Debian 10 или более поздней версии, openSUSE 15.2 или более поздней версии, Fedora Linux 32 или более поздней версии.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Процессор Intel Pentium 4 или более поздней версии с поддержкой SSE3.<br />
     &nbsp;&nbsp;&nbsp;&nbsp;Для мобильных устройств:<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;Android: <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Android 10.0 или более поздней версии<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;iOS:<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iOS 12 или более поздней версии<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Android: <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Android 10.0 или более поздней версии<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;iOS:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iOS 12 или более поздней версии<br />
 
 
 **[ ФУНКЦИОНАЛЬНЫЕ ТРЕБОВАНИЯ ]**
