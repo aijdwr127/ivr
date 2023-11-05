@@ -1,0 +1,44 @@
+<style>
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  max-width: 50vw;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>
+<main class="form-signin w-100 m-auto">
+    <form method="post">
+        <h1><b>auth</b></h1>
+        <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="nickname">
+        <label for="floatingInput">nickname</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+        <label for="floatingPassword">password</label>
+        </div>
+        {{#if error}}
+        <div class="alert alert-danger" role="alert">{{error}}</div>
+        {{/if}}
+        <button type="submit" class="btn btn-dark btn-lg"><b>submit</b></button>
+    </form>
+</main>

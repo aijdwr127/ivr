@@ -1,0 +1,31 @@
+<h1><b>add docs</b></h1>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="title">
+        <label for="floatingInput">title</label>
+    </div>
+    <div class="form-floating mb-3">
+        <textarea type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="text"></textarea>
+        <label for="floatingInput">text of document</label>
+    </div>
+    {{!-- <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"><b>text</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="text of your document"></textarea>
+    </div> --}}
+    <div class="mb-3">
+        <label for="formFile" class="form-label"><i>or upload the file in .docx,.doc format</i></label>
+        <input class="form-control" type="file" name="wordFile" accept=".docx" id="formFile">
+    </div>
+    <select class="form-select mb-3" name="language" aria-label="Default select example">
+        <option value="undefined" selected>choose language</option>
+        <option value="en">english</option>
+        <option value="ru">russian</option>
+        <option value="fr">french</option>
+        <option value="de">german</option>
+    </select>
+    {{#if error}}
+        <div class="alert alert-danger" role="alert">{{error}}</div>
+    {{/if}}
+    <button type="submit" class="btn btn-dark"><b>submit</b></button>
+</form>

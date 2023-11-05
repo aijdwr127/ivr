@@ -1,0 +1,84 @@
+<div class="mb-3 mt-5">
+    {{#each docs}}
+    <h1><b>{{title}}</b></h1>
+    <h5>by <b>{{author}}</b> on <b>{{date}}</b></h5>
+    <h5>language <b>{{language}}</b></h5>
+    {{/each}}
+</div>
+
+
+<main>
+  <div class="container py-4">
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6 mb-3">
+        <div class="border shadow-sm p-5 rounded-3">
+          <h2><b>text</b></h2>
+          {{#each docs}}
+          <h5>{{text}}</h5>
+          {{/each}}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="border shadow-sm p-5 rounded-3 mb-3">
+          <h2><b>audio</b></h2>
+          {{!-- audio player settings --}}
+          <div>
+            <audio id="audioFile" controls>
+            <source src="../{{postId}}.mp3" type="audio/mpeg" class="rounded-0">
+          </audio>
+          </div>
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>speed</b>
+          </button>
+          <ul class="dropdown-menu" style="cursor: pointer;">
+            <li><a class="dropdown-item" onclick="setPlaySpeed(0.5)"><b>0.5</b></a></li>
+            <li><a class="dropdown-item" onclick="setPlaySpeed(0.75)"><b>0.75</b></a></li>
+            <li><a class="dropdown-item" onclick="setPlaySpeed(1)"><b>1</b></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" onclick="setPlaySpeed(1.25)"><b>1.25</b></a></li>
+            <li><a class="dropdown-item" onclick="setPlaySpeed(1.5)"><b>1.5</b></a></li>
+            <li><a class="dropdown-item" onclick="setPlaySpeed(2)"><b>2</b></a></li>
+          </ul>
+        </div>
+        <script>
+          let audioFile = document.getElementById("audioFile")
+          const setPlaySpeed = (speed) => {
+            audioFile.playbackRate = speed
+          }
+        </script>
+        {{!-- end of audio player settings --}}
+        </div>
+        <div class="border shadow-sm p-5 rounded-3">
+          <h2><b>notes</b></h2>
+  {{!-- form to make new note --}}
+      <form method="post" action="/view/{{postId}}/add" class="mb-5">
+          <div class="form-floating mb-3">
+              <textarea type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="text"></textarea>
+              <label for="floatingInput">new note</label>
+          </div>
+          <button type="submit" class="btn btn-success"><b>add</b></button>
+      </form>
+  {{!-- end of form --}}
+          <ol class="list-group list-group-numbered">
+            {{#each notes}}
+            <li class="list-group-item d-flex border rounded justify-content-between align-items-start mb-2">
+              <div class="ms-2 me-auto">
+                {{!-- <div class="fw-bold">Subheading</div> --}}
+                {{text}}
+              </div>
+              <div class="">
+                <form method="post" action="/view/{{postId}}/delete/{{_id}}">
+                <button type="submit" class="border-0 badge bg-danger rounded-pill mr-5">
+                  delete
+                </button>
+              </form>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
