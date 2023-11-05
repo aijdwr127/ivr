@@ -368,7 +368,7 @@ app.post('/add-docs', checkCookie, upload.single('wordFile'), async (req, res) =
 				postId: getIdOfAddedPost
 			})
 			await newAddedPost.save()
-			const gttsEn = new gtts(textOfDoc, languageOfDoc);
+			const gttsEn = new gtts(extractedText, languageOfDoc);
 			gttsEn.save(`${process.env.audioDirectory}/${getIdOfAddedPost}.mp3`, (err, result) => {
 				if (err) console.log(err)
 			})
