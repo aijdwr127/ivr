@@ -1,0 +1,70 @@
+{{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><b>Spectre</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Link 2</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Sign in</button>
+    </form>
+  </div>
+</nav> --}}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary mb-auto">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><b>spectre</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          {{#if isSearch}}
+          <a class="nav-link" href="/search"><b>search</b></a>
+          {{else}}
+          <a class="nav-link" href="/search">search</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if isDocs}}
+          <a class="nav-link" href="/my-docs"><b>my docs</b></a>
+          {{else}}
+          <a class="nav-link" href="/my-docs">my docs</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if isAddDocs}}
+          <a class="nav-link" href="/add-docs"><b>add docs</b></a>
+          {{else}}
+          <a class="nav-link" href="/add-docs">add docs</a>
+          {{/if}}
+        </li>
+      </ul>
+      {{#if user}}
+      <form class="d-flex">
+        <a href="/logout" class="btn btn-danger"><b>log out</b></a>
+      </form>
+      {{else}}
+      <form class="d-flex">
+        <a href="/auth" class="btn btn-dark"><b>sign in</b></a>
+      </form>
+      {{/if}}
+    </div>
+  </div>
+</nav>
+
+
+<style>
+* {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+</style>
